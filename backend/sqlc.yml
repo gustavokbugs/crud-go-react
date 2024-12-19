@@ -1,0 +1,10 @@
+version: "2"
+sql:
+  - engine: "postgresql"
+    queries: "compartilha-tech/internal/infra/database/sqlc"
+    schema: "compartilha-tech/internal/infra/database/sqlc"
+    gen:
+      go:
+        output_db_file_name: "sqlc.go"
+        package: "queries"
+        out: "compartilha-tech/internal/infra/database/sqlc/queries"

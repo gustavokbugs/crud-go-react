@@ -1,0 +1,34 @@
+@host = http://localhost:3333
+
+POST {{host}}/person
+
+{
+	"name": "John",
+	"age": 20
+}
+
+###
+POST {{host}}/person
+
+{
+	"name": "Doe",
+	"age": 30,
+	"active": false
+}
+
+###
+GET {{host}}/person
+
+###
+GET {{host}}/person/78e83872-7c0c-4a3b-ab11-3b6f3a19cadf
+
+###
+PATCH {{host}}/person/1182dd0a-52d1-482f-a92e-2cffe2993230
+
+{
+	"age": 40
+}
+
+###
+DELETE {{host}}/person/1182dd0a-52d1-482f-a92e-2cffe2993230
+
